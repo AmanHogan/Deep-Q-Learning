@@ -1,3 +1,7 @@
+
+### Link to Github
+https://github.com/AmanHogan/Deep-Q-Learning
+
 # **Introduction**
 - **State Space:** Since, there are now 10 people max in the simulation the state space has increased, so we need a more coherent way to represent the state space.
 - **Online Model and Target** Since we are using DQL, we need a way to setup a DQN for our agent and we need to setup a target dqn.

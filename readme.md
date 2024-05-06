@@ -1,5 +1,8 @@
 # Elevator Scheduling using Deep Q-Learning
 
+### Link to Github
+https://github.com/AmanHogan/Deep-Q-Learning
+
 ## Summary/Objective (CSE 6369 - Reinforcement Learning)
 Consider an extended version of the elevator problem from Project 2 where the number of possible persons to be waiting or in elevators is 10 and the capacity of each elevator is limited to 2 persons. This problem will have a significantly larger state space. Design an MDP for this problem and build a Deep Q-Learning agent to learn an elevator policy for this problem. You can use libraries to build the neural network. Here is a link to the previous Elevator MDP: https://github.com/AmanHogan/Q-SARSA-and-LAMDA-Learning
 
