@@ -1,13 +1,11 @@
 # **Introduction**
-
-### **Before performing learning**
 - **State Space:** Since, there are now 10 people max in the simulation the state space has increased, so we need a more coherent way to represent the state space.
 - **Online Model and Target** Since we are using DQL, we need a way to setup a DQN for our agent and we need to setup a target dqn.
 - **Actions:** Since we are now using neural nets, we need a way to represent actions in a manner where we can learn
 - **Environment:** We need to modify our environment to handle 10 people
 - **Hyperparameters:** We need to add some new hyperparameters
 
-#### Representing our states and actions
+# Representing our states and actions
 
 Our state space previously, with a sim capacity of 2, was:
 
@@ -65,24 +63,24 @@ ACTION_MAPPING = {
 Given the proper set up of the states and actions, we can move on to the DQL.
 
 
-### Deep Q Learning
+# Deep Q Learning
 For our deep q learning, there are three main components that our agent uses: 
 
 - Replay Buffer
 - Online model
 - Target model
 
-#### Replay Buffer
+# Replay Buffer
 Our replay buffer contains samples from previous training experiences of a set maximum size. Our training samples a set amount of samples form the replay buffer. The best results were obtained with a batch size of 2 and a max buffer size of 100.
 
-#### Online Model and Target Model
+# Online Model and Target Model
 - First, our agent takes an action according to the policy.
 - We take action A, and aboser Reward and add this experience to the replay buffer.
 - We then train the model and implement epsilon decay
 - During training the model, we get the current q value predictions. We then have the target model predict the q values for the next state and get the td target update for that action. We replace the old q values for that action with the td target. We then compute the gradient step using the fit() method to update the model's weights
 - Every 10 steps, we update the target model
 
-#### Results
+# Results
 
 I obtained the best consistent results using the following params:
 ```
